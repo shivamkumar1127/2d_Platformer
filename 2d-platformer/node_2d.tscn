@@ -100,7 +100,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_h8aii"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rfqu1"]
-distance = -137.0
+distance = -145.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("1_0e48y")
@@ -2068,10 +2068,11 @@ limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="kill zone" parent="Player/Camera2D" unique_id=932595128 instance=ExtResource("3_hqns4")]
+[node name="kill zone" parent="." unique_id=932595128 instance=ExtResource("3_hqns4")]
+position = Vector2(147, -66)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/kill zone" unique_id=2081910248]
-position = Vector2(-76, -4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill zone" unique_id=2081910248]
+position = Vector2(-251, 11)
 shape = SubResource("WorldBoundaryShape2D_rfqu1")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1115483763]
@@ -2091,69 +2092,71 @@ position = Vector2(381, -23)
 position = Vector2(579, -23)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1147656799]
-position = Vector2(1161, -110)
+position = Vector2(1167, -109)
 sprite_frames = SubResource("SpriteFrames_s7w4q")
-frame_progress = 0.017115448
+frame_progress = 0.11815319
 
-[node name="Area2D" parent="." unique_id=760213943 instance=ExtResource("10_ir8iy")]
-position = Vector2(83, -45)
+[node name="coins" type="Node" parent="." unique_id=1066629767]
 
-[node name="Area2D2" parent="." unique_id=15025415 instance=ExtResource("10_ir8iy")]
-position = Vector2(107, -46)
+[node name="Area2D5" parent="coins" unique_id=193659849 instance=ExtResource("10_ir8iy")]
+position = Vector2(378, 400)
 
-[node name="Area2D3" parent="." unique_id=129721951 instance=ExtResource("10_ir8iy")]
-position = Vector2(135, -47)
+[node name="Area2D" parent="coins" unique_id=760213943 instance=ExtResource("10_ir8iy")]
+position = Vector2(214, 403)
 
-[node name="Area2D4" parent="." unique_id=1471151394 instance=ExtResource("10_ir8iy")]
-position = Vector2(157, -47)
+[node name="Area2D2" parent="coins" unique_id=15025415 instance=ExtResource("10_ir8iy")]
+position = Vector2(238, 402)
 
-[node name="Area2D5" parent="." unique_id=193659849 instance=ExtResource("10_ir8iy")]
-position = Vector2(247, -48)
+[node name="Area2D3" parent="coins" unique_id=129721951 instance=ExtResource("10_ir8iy")]
+position = Vector2(266, 401)
 
-[node name="Area2D6" parent="." unique_id=816770105 instance=ExtResource("10_ir8iy")]
-position = Vector2(268, -58)
+[node name="Area2D4" parent="coins" unique_id=1471151394 instance=ExtResource("10_ir8iy")]
+position = Vector2(288, 401)
 
-[node name="Area2D7" parent="." unique_id=177983791 instance=ExtResource("10_ir8iy")]
-position = Vector2(293, -55)
+[node name="Area2D6" parent="coins" unique_id=816770105 instance=ExtResource("10_ir8iy")]
+position = Vector2(399, 390)
 
-[node name="Area2D8" parent="." unique_id=630931040 instance=ExtResource("10_ir8iy")]
-position = Vector2(312, -40)
+[node name="Area2D7" parent="coins" unique_id=177983791 instance=ExtResource("10_ir8iy")]
+position = Vector2(424, 393)
 
-[node name="Area2D9" parent="." unique_id=1416204139 instance=ExtResource("10_ir8iy")]
-position = Vector2(407, -46)
+[node name="Area2D8" parent="coins" unique_id=630931040 instance=ExtResource("10_ir8iy")]
+position = Vector2(443, 408)
 
-[node name="Area2D10" parent="." unique_id=1355323391 instance=ExtResource("10_ir8iy")]
-position = Vector2(427, -46)
+[node name="Area2D9" parent="coins" unique_id=1416204139 instance=ExtResource("10_ir8iy")]
+position = Vector2(538, 402)
 
-[node name="Area2D11" parent="." unique_id=2023541341 instance=ExtResource("10_ir8iy")]
-position = Vector2(447, -46)
+[node name="Area2D10" parent="coins" unique_id=1355323391 instance=ExtResource("10_ir8iy")]
+position = Vector2(558, 402)
 
-[node name="Area2D12" parent="." unique_id=1913180407 instance=ExtResource("10_ir8iy")]
-position = Vector2(467, -46)
+[node name="Area2D11" parent="coins" unique_id=2023541341 instance=ExtResource("10_ir8iy")]
+position = Vector2(578, 402)
 
-[node name="Area2D13" parent="." unique_id=330421090 instance=ExtResource("10_ir8iy")]
-position = Vector2(601, -46)
+[node name="Area2D12" parent="coins" unique_id=1913180407 instance=ExtResource("10_ir8iy")]
+position = Vector2(598, 402)
 
-[node name="Area2D14" parent="." unique_id=800964842 instance=ExtResource("10_ir8iy")]
-position = Vector2(620, -50)
+[node name="Area2D13" parent="coins" unique_id=330421090 instance=ExtResource("10_ir8iy")]
+position = Vector2(732, 402)
 
-[node name="Area2D15" parent="." unique_id=1243748989 instance=ExtResource("10_ir8iy")]
-position = Vector2(638, -48)
+[node name="Area2D14" parent="coins" unique_id=800964842 instance=ExtResource("10_ir8iy")]
+position = Vector2(751, 398)
 
-[node name="Area2D16" parent="." unique_id=1471979176 instance=ExtResource("10_ir8iy")]
-position = Vector2(658, -50)
+[node name="Area2D15" parent="coins" unique_id=1243748989 instance=ExtResource("10_ir8iy")]
+position = Vector2(769, 400)
 
-[node name="Area2D17" parent="." unique_id=1032076962 instance=ExtResource("10_ir8iy")]
-position = Vector2(680, -51)
+[node name="Area2D16" parent="coins" unique_id=1471979176 instance=ExtResource("10_ir8iy")]
+position = Vector2(789, 398)
 
-[node name="Area2D18" parent="." unique_id=2138891585 instance=ExtResource("10_ir8iy")]
-position = Vector2(944, -71)
+[node name="Area2D17" parent="coins" unique_id=1032076962 instance=ExtResource("10_ir8iy")]
+position = Vector2(811, 397)
 
-[node name="Area2D19" parent="." unique_id=70755323 instance=ExtResource("10_ir8iy")]
-position = Vector2(961, -94)
+[node name="Area2D18" parent="coins" unique_id=2138891585 instance=ExtResource("10_ir8iy")]
+position = Vector2(1075, 377)
 
-[node name="Area2D20" parent="." unique_id=356005837 instance=ExtResource("10_ir8iy")]
-position = Vector2(990, -108)
+[node name="Area2D19" parent="coins" unique_id=70755323 instance=ExtResource("10_ir8iy")]
+position = Vector2(1092, 354)
 
-[node name="Area2D21" parent="." unique_id=395000696 instance=ExtResource("10_ir8iy")]
-position = Vector2(1011, -99)
+[node name="Area2D20" parent="coins" unique_id=356005837 instance=ExtResource("10_ir8iy")]
+position = Vector2(1121, 340)
+
+[node name="Area2D21" parent="coins" unique_id=395000696 instance=ExtResource("10_ir8iy")]
+position = Vector2(1142, 349)
