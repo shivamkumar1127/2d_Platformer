@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dytjotgpn7e48" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Tiles/Trees.png" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://dbwo7a68b1njd" path="res://assets/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="2_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cbj503jkqa8hd" path="res://assets/coins-chests-etc-2-0-noborders.png" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://ch73kr2ybvhbu" path="res://kill_zone.tscn" id="3_hqns4"]
 [ext_resource type="Texture2D" uid="uid://d0wyhew73dfuu" path="res://assets/Pixel Adventure 1/Free/Traps/Falling Platforms/On (32x10).png" id="6_rj586"]
 [ext_resource type="Texture2D" uid="uid://bpp36agmfsiii" path="res://assets/Pixel Adventure 1/Free/Traps/Falling Platforms/Off.png" id="7_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://balsfo1ys07g6" path="res://move.tscn" id="8_rj586"]
@@ -97,6 +98,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h8aii"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rfqu1"]
+distance = -137.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("1_0e48y")
@@ -2059,9 +2063,16 @@ debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1692920585]
 position = Vector2(147, -65)
 zoom = Vector2(1.595, 1.595)
-limit_enabled = false
+limit_bottom = 500
+limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="kill zone" parent="Player/Camera2D" unique_id=932595128 instance=ExtResource("3_hqns4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Camera2D/kill zone" unique_id=2081910248]
+position = Vector2(-76, -4)
+shape = SubResource("WorldBoundaryShape2D_rfqu1")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1115483763]
 position = Vector2(-105, 0)
