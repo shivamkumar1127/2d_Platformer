@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bpp36agmfsiii" path="res://assets/Pixel Adventure 1/Free/Traps/Falling Platforms/Off.png" id="7_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://balsfo1ys07g6" path="res://move.tscn" id="8_rj586"]
 [ext_resource type="Texture2D" uid="uid://dlnvra6e4gcos" path="res://assets/Pixel Adventure 1/Free/Traps/Trampoline/Jump (28x28).png" id="9_4d7sh"]
+[ext_resource type="PackedScene" uid="uid://ij1fmot2l8r2" path="res://area_2d.tscn" id="10_ir8iy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
 atlas = ExtResource("2_q6r6c")
@@ -2039,6 +2040,7 @@ position = Vector2(131, 448)
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1545522319]
 z_index = 1
 position = Vector2(0, -1)
+collision_layer = 3
 script = ExtResource("1_0hol4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1015287806]
@@ -2080,4 +2082,67 @@ position = Vector2(579, -23)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1147656799]
 position = Vector2(1161, -110)
 sprite_frames = SubResource("SpriteFrames_s7w4q")
-frame_progress = 0.395045
+frame_progress = 0.017115448
+
+[node name="Area2D" parent="." unique_id=760213943 instance=ExtResource("10_ir8iy")]
+position = Vector2(83, -45)
+
+[node name="Area2D2" parent="." unique_id=15025415 instance=ExtResource("10_ir8iy")]
+position = Vector2(107, -46)
+
+[node name="Area2D3" parent="." unique_id=129721951 instance=ExtResource("10_ir8iy")]
+position = Vector2(135, -47)
+
+[node name="Area2D4" parent="." unique_id=1471151394 instance=ExtResource("10_ir8iy")]
+position = Vector2(157, -47)
+
+[node name="Area2D5" parent="." unique_id=193659849 instance=ExtResource("10_ir8iy")]
+position = Vector2(247, -48)
+
+[node name="Area2D6" parent="." unique_id=816770105 instance=ExtResource("10_ir8iy")]
+position = Vector2(268, -58)
+
+[node name="Area2D7" parent="." unique_id=177983791 instance=ExtResource("10_ir8iy")]
+position = Vector2(293, -55)
+
+[node name="Area2D8" parent="." unique_id=630931040 instance=ExtResource("10_ir8iy")]
+position = Vector2(312, -40)
+
+[node name="Area2D9" parent="." unique_id=1416204139 instance=ExtResource("10_ir8iy")]
+position = Vector2(407, -46)
+
+[node name="Area2D10" parent="." unique_id=1355323391 instance=ExtResource("10_ir8iy")]
+position = Vector2(427, -46)
+
+[node name="Area2D11" parent="." unique_id=2023541341 instance=ExtResource("10_ir8iy")]
+position = Vector2(447, -46)
+
+[node name="Area2D12" parent="." unique_id=1913180407 instance=ExtResource("10_ir8iy")]
+position = Vector2(467, -46)
+
+[node name="Area2D13" parent="." unique_id=330421090 instance=ExtResource("10_ir8iy")]
+position = Vector2(601, -46)
+
+[node name="Area2D14" parent="." unique_id=800964842 instance=ExtResource("10_ir8iy")]
+position = Vector2(620, -50)
+
+[node name="Area2D15" parent="." unique_id=1243748989 instance=ExtResource("10_ir8iy")]
+position = Vector2(638, -48)
+
+[node name="Area2D16" parent="." unique_id=1471979176 instance=ExtResource("10_ir8iy")]
+position = Vector2(658, -50)
+
+[node name="Area2D17" parent="." unique_id=1032076962 instance=ExtResource("10_ir8iy")]
+position = Vector2(680, -51)
+
+[node name="Area2D18" parent="." unique_id=2138891585 instance=ExtResource("10_ir8iy")]
+position = Vector2(944, -71)
+
+[node name="Area2D19" parent="." unique_id=70755323 instance=ExtResource("10_ir8iy")]
+position = Vector2(961, -94)
+
+[node name="Area2D20" parent="." unique_id=356005837 instance=ExtResource("10_ir8iy")]
+position = Vector2(990, -108)
+
+[node name="Area2D21" parent="." unique_id=395000696 instance=ExtResource("10_ir8iy")]
+position = Vector2(1011, -99)
