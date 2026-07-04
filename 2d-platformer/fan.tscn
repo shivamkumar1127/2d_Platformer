@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bqno0oqlr4o2j"]
+
+[ext_resource type="Texture2D" uid="uid://d0wyhew73dfuu" path="res://assets/Pixel Adventure 1/Free/Traps/Falling Platforms/On (32x10).png" id="1_8vgsl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l2ec"]
+atlas = ExtResource("1_8vgsl")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ml7w"]
+atlas = ExtResource("1_8vgsl")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc01m"]
+atlas = ExtResource("1_8vgsl")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoasc"]
+atlas = ExtResource("1_8vgsl")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rfqu1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l2ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ml7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc01m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoasc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfqu1"]
+size = Vector2(33, 5)
+
+[node name="Area2D" type="Area2D" unique_id=1098458208]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1704454510]
+sprite_frames = SubResource("SpriteFrames_rfqu1")
+autoplay = "default"
+frame_progress = 0.71436214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1636278987]
+position = Vector2(0.5, -2.5)
+shape = SubResource("RectangleShape2D_rfqu1")
