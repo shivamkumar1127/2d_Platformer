@@ -3148,8 +3148,8 @@ position = Vector2(2318, 148)
 [node name="Area2D56" parent="coins" unique_id=801725581 instance=ExtResource("10_ir8iy")]
 position = Vector2(2294, 149)
 
-[node name="Area2D" parent="." unique_id=1622591838 instance=ExtResource("11_hqns4")]
-position = Vector2(1895, -282)
+[node name="Area2D57" parent="coins" unique_id=1622591838 instance=ExtResource("11_hqns4")]
+position = Vector2(2026, 166)
 
-[node name="Area2D2" parent="." unique_id=2107680512 instance=ExtResource("10_ir8iy")]
-position = Vector2(2088, -296)
+[node name="Area2D58" parent="coins" unique_id=2107680512 instance=ExtResource("10_ir8iy")]
+position = Vector2(2219, 152)
