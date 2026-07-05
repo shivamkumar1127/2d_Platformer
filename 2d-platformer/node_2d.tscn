@@ -3071,9 +3071,6 @@ position = Vector2(1629, 368)
 [node name="Area2D42" parent="coins" unique_id=55154129 instance=ExtResource("10_ir8iy")]
 position = Vector2(1650, 367)
 
-[node name="Area2D17" parent="coins/Area2D42" unique_id=592077991 instance=ExtResource("10_ir8iy")]
-position = Vector2(567, -216)
-
 [node name="Area2D43" parent="coins" unique_id=869371460 instance=ExtResource("10_ir8iy")]
 position = Vector2(1673, 367)
 
@@ -3122,3 +3119,6 @@ position = Vector2(2294, 149)
 
 [node name="Area2D" parent="." unique_id=1622591838 instance=ExtResource("11_hqns4")]
 position = Vector2(1895, -282)
+
+[node name="Area2D2" parent="." unique_id=2107680512 instance=ExtResource("10_ir8iy")]
+position = Vector2(2088, -296)
