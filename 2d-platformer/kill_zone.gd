@@ -1,20 +1,17 @@
 extends Area2D
 
+# These variables are accessible to all functions in this script
+@onready var death_label: Label = $"../CanvasLayer/DeathMessage"
 @onready var timer: Timer = $Timer
-# Reference the UI label you just created
-@onready var death_message: Label = get_node("../CanvasLayer/DeathMessage")
 
+# This function handles the death logic
 func _on_body_entered(body: Node2D) -> void:
 	print("you died")
-	
-	# Show the UI label
-	death_message.visible = true
-	
-	# Optional: Stop the player from moving so they don't slide 
-	# while the death message is showing
-	body.queue_free() 
-	
+	death_label.visible = true
+	body.set_physics_process(false)
+	body.hide()
 	timer.start()
 
+# This function handles the scene restart
 func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
