@@ -2,5 +2,5 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	print("+1 coin")
-	GameManager.add_point() 
+	GameManager.add_point()
 	queue_free()

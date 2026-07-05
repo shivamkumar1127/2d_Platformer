@@ -1,17 +1,15 @@
 extends Area2D
 
-# These variables are accessible to all functions in this script
-@onready var death_label: Label = $"../CanvasLayer/DeathMessage"
-@onready var timer: Timer = $Timer
-
-# This function handles the death logic
 func _on_body_entered(body: Node2D) -> void:
-	print("you died")
-	death_label.visible = true
-	body.set_physics_process(false)
-	body.hide()
-	timer.start()
-
-# This function handles the scene restart
-func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
+	if body.name == "Player":
+		# 1. Find the label and turn it on
+		get_parent().get_node("CanvasLayer/DeathMessage").visible = true
+		
+		# 2. Reset the score
+		GameManager.reset_score()
+		
+		# 3. Wait for 1 second before reloading
+		await get_tree().create_timer(1.0).timeout
+		
+		# 4. Now reload the scene
+		get_tree().reload_current_scene()

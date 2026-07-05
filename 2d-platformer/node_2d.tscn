@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccdhbhe40n0c3" path="res://assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://0kaoagg3xdr6" path="res://player.gd" id="1_0hol4"]
+[ext_resource type="Script" uid="uid://coe546wtct2mv" path="res://score_label.gd" id="1_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://dytjotgpn7e48" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Tiles/Trees.png" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://c6emud5i1q683" path="res://assets/Pixel Adventure 1/Free/Main Characters/Mask Dude/Fall (32x32).png" id="2_k73cj"]
 [ext_resource type="Texture2D" uid="uid://dbwo7a68b1njd" path="res://assets/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="2_q6r6c"]
@@ -2887,6 +2888,36 @@ _data = {
 z_as_relative = false
 position = Vector2(131, 448)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=467316179]
+
+[node name="DeathMessage" type="Label" parent="CanvasLayer" unique_id=1652230386]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.99994
+offset_top = -46.0
+offset_right = -17.999939
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4343653, 1.992436)
+theme_override_colors/font_color = Color(0.9996883, 0.16635153, 0.12071983, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "You Died !!"
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=906575333]
+offset_left = 1031.0
+offset_top = 38.000004
+offset_right = 1092.0
+offset_bottom = 61.000008
+scale = Vector2(1.4216498, 1.4170282)
+text = "Coins: 0"
+script = ExtResource("1_fs4d3")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1545522319]
 z_index = 1
 position = Vector2(-80, -10)
@@ -2916,27 +2947,6 @@ limit_bottom = 491
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=467316179]
-
-[node name="DeathMessage" type="Label" parent="CanvasLayer" unique_id=1652230386]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -99.99994
-offset_top = -46.0
-offset_right = -17.999939
-offset_bottom = -23.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.4343653, 1.992436)
-theme_override_colors/font_color = Color(0.9996883, 0.16635153, 0.12071983, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "You Died !!"
 
 [node name="kill zone" parent="." unique_id=932595128 instance=ExtResource("3_hqns4")]
 position = Vector2(147, -66)
