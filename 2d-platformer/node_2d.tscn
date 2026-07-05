@@ -209,7 +209,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_h8aii"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dl81w"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rfqu1"]
 distance = -145.0
@@ -2901,9 +2901,9 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1145109807]
 show_behind_parent = true
-position = Vector2(-5, -31)
+position = Vector2(-5, -30)
 scale = Vector2(0.9232215, 0.97803175)
-shape = SubResource("CircleShape2D_h8aii")
+shape = SubResource("CircleShape2D_dl81w")
 debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1692920585]

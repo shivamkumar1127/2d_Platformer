@@ -72,3 +72,4 @@ shape = SubResource("CircleShape2D_jvmym")
 script = ExtResource("2_dl81w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_area_2d_body_entered"]
