@@ -2917,6 +2917,16 @@ limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=467316179]
+
+[node name="DeathMessage" type="Label" parent="CanvasLayer" unique_id=1422956734]
+offset_left = 2508.0002
+offset_top = 364.0
+offset_right = 2590.0002
+offset_bottom = 387.0
+scale = Vector2(4.9593906, 4.8179936)
+text = "You Died !!"
+
 [node name="kill zone" parent="." unique_id=932595128 instance=ExtResource("3_hqns4")]
 position = Vector2(147, -66)
 
