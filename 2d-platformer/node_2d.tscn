@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://dcibqu0e8ibbs" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Backgrounds/Sky.png" id="11_d2bti"]
 [ext_resource type="PackedScene" uid="uid://bqno0oqlr4o2j" path="res://fan.tscn" id="11_hqns4"]
 [ext_resource type="Texture2D" uid="uid://dg8gcwxukht6p" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Backgrounds/Clouds.png" id="12_ta5nu"]
+[ext_resource type="Script" uid="uid://bpdw5o1vcip32" path="res://goal.gd" id="20_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://c6ma5x1cp2ylo" path="res://assets/Pixel Adventure 1/Free/Items/Checkpoints/End/End (Idle).png" id="21_ei405"]
+[ext_resource type="Texture2D" uid="uid://5t8kpds70cx5" path="res://assets/Pixel Adventure 1/Free/Items/Checkpoints/End/End (Pressed) (64x64).png" id="22_e8dv2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
 atlas = ExtResource("2_q6r6c")
@@ -2884,6 +2887,84 @@ _data = {
 &"spring": SubResource("Animation_ir8iy")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7plk7"]
+atlas = ExtResource("21_ei405")
+region = Rect2(7, 17, 50, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mryly"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq1c5"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ornx7"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnnru"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_540hr"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ip5v"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dlx"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4wnb"]
+atlas = ExtResource("22_e8dv2")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0rg8a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7plk7")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mryly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq1c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ornx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnnru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_540hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ip5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5dlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4wnb")
+}],
+"loop": 1,
+"name": &"Pressed",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7plk7"]
+
 [node name="Node2D" type="Node2D" unique_id=1607729874]
 z_as_relative = false
 position = Vector2(131, 448)
@@ -3136,20 +3217,33 @@ position = Vector2(2401, 117)
 [node name="Area2D52" parent="coins" unique_id=69117784 instance=ExtResource("10_ir8iy")]
 position = Vector2(2381, 118)
 
-[node name="Area2D53" parent="coins" unique_id=1937002720 instance=ExtResource("10_ir8iy")]
-position = Vector2(2498, 87)
-
-[node name="Area2D54" parent="coins" unique_id=1165431432 instance=ExtResource("10_ir8iy")]
-position = Vector2(2480, 86)
-
 [node name="Area2D55" parent="coins" unique_id=283139555 instance=ExtResource("10_ir8iy")]
 position = Vector2(2318, 148)
 
 [node name="Area2D56" parent="coins" unique_id=801725581 instance=ExtResource("10_ir8iy")]
 position = Vector2(2294, 149)
 
-[node name="Area2D" parent="." unique_id=1622591838 instance=ExtResource("11_hqns4")]
-position = Vector2(1895, -282)
+[node name="Area2D57" parent="coins" unique_id=1622591838 instance=ExtResource("11_hqns4")]
+position = Vector2(2026, 166)
 
-[node name="Area2D2" parent="." unique_id=2107680512 instance=ExtResource("10_ir8iy")]
-position = Vector2(2088, -296)
+[node name="Area2D58" parent="coins" unique_id=2107680512 instance=ExtResource("10_ir8iy")]
+position = Vector2(2219, 152)
+
+[node name="Goal" type="Area2D" parent="." unique_id=90906673]
+position = Vector2(2301, -354)
+scale = Vector2(0.6651953, 0.7495481)
+collision_mask = 2
+script = ExtResource("20_fs4d3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Goal" unique_id=737159901]
+position = Vector2(1.5033178, 10.673098)
+scale = Vector2(0.628548, 0.7112585)
+sprite_frames = SubResource("SpriteFrames_0rg8a")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=958907308]
+position = Vector2(-1.0000001, 0)
+scale = Vector2(1.810372, 1.1814698)
+shape = SubResource("CircleShape2D_7plk7")
+
+[connection signal="body_entered" from="Goal" to="Goal" method="_on_body_entered"]
