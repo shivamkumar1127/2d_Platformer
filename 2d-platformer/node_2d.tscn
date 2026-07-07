@@ -3001,6 +3001,12 @@ scale = Vector2(1.4216498, 1.4170282)
 text = "Coins: 0"
 script = ExtResource("1_fs4d3")
 
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=428439194]
+offset_right = 80.0
+offset_bottom = 51.0
+text = "back
+"
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1545522319]
 z_index = 1
 position = Vector2(-80, -10)
@@ -3269,4 +3275,5 @@ position = Vector2(1707, -72)
 [node name="Node2D5" parent="." unique_id=682833386 instance=ExtResource("24_2nhjh")]
 position = Vector2(2221, -296)
 
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/ScoreLabel" method="_on_button_pressed"]
 [connection signal="body_entered" from="Goal" to="Goal" method="_on_body_entered"]
