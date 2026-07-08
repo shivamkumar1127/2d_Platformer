@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("Jump")
+			SoundManager.play_sfx("jump")
 		else:
 			animated_sprite.play("Fall")
 	else:

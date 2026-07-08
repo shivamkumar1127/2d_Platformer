@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dcibqu0e8ibbs" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Backgrounds/Sky.png" id="11_d2bti"]
 [ext_resource type="PackedScene" uid="uid://bqno0oqlr4o2j" path="res://fan.tscn" id="11_hqns4"]
 [ext_resource type="Texture2D" uid="uid://dg8gcwxukht6p" path="res://assets/FREE_Fantasy Forest/FREE_Fantasy Forest/Backgrounds/Clouds.png" id="12_ta5nu"]
+[ext_resource type="AudioStream" uid="uid://su3ncvk12vik" path="res://sounds/power_up.wav" id="18_bjha6"]
 [ext_resource type="Script" uid="uid://bpdw5o1vcip32" path="res://goal.gd" id="20_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://c6ma5x1cp2ylo" path="res://assets/Pixel Adventure 1/Free/Items/Checkpoints/End/End (Idle).png" id="21_ei405"]
 [ext_resource type="Texture2D" uid="uid://5t8kpds70cx5" path="res://assets/Pixel Adventure 1/Free/Items/Checkpoints/End/End (Pressed) (64x64).png" id="22_e8dv2"]
@@ -3064,6 +3065,11 @@ position = Vector2(381, -23)
 position = Vector2(579, -23)
 
 [node name="coins" type="Node" parent="." unique_id=1066629767]
+
+[node name="CoinPlayer" type="AudioStreamPlayer" parent="coins" unique_id=1186664194]
+stream = ExtResource("18_bjha6")
+volume_db = 3.49
+bus = &"sfx"
 
 [node name="Area2D5" parent="coins" unique_id=193659849 instance=ExtResource("10_ir8iy")]
 position = Vector2(378, 400)
